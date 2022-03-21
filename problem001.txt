@@ -1,0 +1,20 @@
+把终端从bash更改为zsh/ssh后，root用户无法登录，，解决办法为：：
+
+在终端中输入
+sudo vim /etc/passwd
+
+将第一行
+root:x:0:0:root:/root:/bin/zsh
+
+改为
+root:x:0:0:root:/root:/bin/bash
+
+
+将最后一行
+username:x:1000:1000:username,,,:/home/username:/username/local/bin/zsh
+
+改为
+username:x:1000:1000:username,,,:/home/username:/username/local/bin/bash
+
+保存就可以登录root了
+
