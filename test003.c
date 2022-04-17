@@ -1,6 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h>   //malloc所在库
 
+
+//动态分配内存
 int main(){
     int number;
     int* a;
@@ -9,7 +11,7 @@ int main(){
     scanf("%d",&number);
     // int a[number];
     
-    a =(int*)malloc(number*sizeof(int));
+    a =(int*)malloc(number*sizeof(int)); //动态分配内存
     
     for(i = 0;i<number;i++){
         scanf("%d",&a[i]);
